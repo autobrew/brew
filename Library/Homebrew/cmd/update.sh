@@ -23,8 +23,8 @@ git() {
 }
 
 git_init_if_necessary() {
-  BREW_OFFICIAL_REMOTE="https://github.com/Homebrew/brew"
-  CORE_OFFICIAL_REMOTE="https://github.com/Homebrew/homebrew-core"
+  BREW_OFFICIAL_REMOTE="https://github.com/legacybrew/brew"
+  CORE_OFFICIAL_REMOTE="https://github.com/legacybrew/homebrew-core"
 
   safe_cd "$HOMEBREW_REPOSITORY"
   if [[ ! -d ".git" ]]
@@ -42,8 +42,8 @@ git_init_if_necessary() {
     trap - EXIT
   fi
 
-  [[ -d "$HOMEBREW_LIBRARY/Taps/homebrew/homebrew-core" ]] || return
-  safe_cd "$HOMEBREW_LIBRARY/Taps/homebrew/homebrew-core"
+  [[ -d "$HOMEBREW_LIBRARY/Taps/legacybrew/homebrew-core" ]] || return
+  safe_cd "$HOMEBREW_LIBRARY/Taps/legacybrew/homebrew-core"
   if [[ ! -d ".git" ]]
   then
     set -e
@@ -388,7 +388,7 @@ EOS
       ! -x "$HOMEBREW_PREFIX/opt/git/bin/git" ]]
   then
     # we cannot install brewed git if homebrew/core is unavailable.
-    [[ -d "$HOMEBREW_LIBRARY/Taps/homebrew/homebrew-core" ]] && brew install git
+    [[ -d "$HOMEBREW_LIBRARY/Taps/legacybrew/homebrew-core" ]] && brew install git
     unset GIT_EXECUTABLE
     if ! git --version &>/dev/null
     then
@@ -445,7 +445,7 @@ EOS
     if [[ -z "$HOMEBREW_UPDATE_FORCE" ]]
     then
       [[ -n "$SKIP_FETCH_BREW_REPOSITORY" && "$DIR" = "$HOMEBREW_REPOSITORY" ]] && continue
-      [[ -n "$SKIP_FETCH_CORE_REPOSITORY" && "$DIR" = "$HOMEBREW_LIBRARY/Taps/homebrew/homebrew-core" ]] && continue
+      [[ -n "$SKIP_FETCH_CORE_REPOSITORY" && "$DIR" = "$HOMEBREW_LIBRARY/Taps/legacybrew/homebrew-core" ]] && continue
     fi
 
     # The upstream repository's default branch may not be master;
