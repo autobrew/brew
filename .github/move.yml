@@ -12,4 +12,4 @@ mentionAuthors: true
 keepContentMentions: true
 # Set custom aliases for targets
 aliases:
-  core: legacybrew/homebrew-core
+  core: autobrew/homebrew-core

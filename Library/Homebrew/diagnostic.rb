@@ -614,9 +614,9 @@ module Homebrew
 
             Without a correctly configured origin, Homebrew won't update
             properly. You can solve this by adding the Homebrew remote:
-              git -C "#{HOMEBREW_REPOSITORY}" remote add origin #{Formatter.url("https://github.com/legacybrew/brew.git")}
+              git -C "#{HOMEBREW_REPOSITORY}" remote add origin #{Formatter.url("https://github.com/autobrew/brew.git")}
           EOS
-        elsif origin !~ %r{legacybrew/brew(\.git|/)?$}
+        elsif origin !~ %r{autobrew/brew(\.git|/)?$}
           <<~EOS
             Suspicious Homebrew/brew git origin remote found.
 
@@ -643,9 +643,9 @@ module Homebrew
 
             Without a correctly configured origin, Homebrew won't update
             properly. You can solve this by adding the Homebrew remote:
-              git -C "#{coretap_path}" remote add origin #{Formatter.url("https://github.com/legacybrew/homebrew-core.git")}
+              git -C "#{coretap_path}" remote add origin #{Formatter.url("https://github.com/autobrew/homebrew-core.git")}
           EOS
-        elsif origin !~ %r{legacybrew/homebrew-core(\.git|/)?$}
+        elsif origin !~ %r{autobrew/homebrew-core(\.git|/)?$}
           return if ENV["CI"] && origin.include?("Homebrew/homebrew-test-bot")
 
           <<~EOS
@@ -657,7 +657,7 @@ module Homebrew
 
             Unless you have compelling reasons, consider setting the
             origin remote to point at the main repository by running:
-              git -C "#{coretap_path}" remote set-url origin #{Formatter.url("https://github.com/legacybrew/homebrew-core.git")}
+              git -C "#{coretap_path}" remote set-url origin #{Formatter.url("https://github.com/autobrew/homebrew-core.git")}
           EOS
         end
 

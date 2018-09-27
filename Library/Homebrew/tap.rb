@@ -589,7 +589,7 @@ end
 # A specialized {Tap} class for the core formulae
 class CoreTap < Tap
   def default_remote
-    "https://github.com/legacybrew/homebrew-core".freeze
+    "https://github.com/autobrew/homebrew-core".freeze
   end
 
   # @private
