@@ -104,17 +104,6 @@ class FormulaInstaller
       return false
     end
 
-    bottle = formula.bottle_specification
-    unless bottle.compatible_cellar?
-      if install_bottle_options[:warn]
-        opoo <<~EOS
-          Building #{formula.full_name} from source:
-            The bottle needs a #{bottle.cellar} Cellar (yours is #{HOMEBREW_CELLAR}).
-        EOS
-      end
-      return false
-    end
-
     true
   end
 
