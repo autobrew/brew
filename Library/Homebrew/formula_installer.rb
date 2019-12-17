@@ -609,7 +609,10 @@ class FormulaInstaller
     if build_bottle?
       ohai "Not running post_install as we're building a bottle"
       puts "You can run it manually using `brew postinstall #{formula.full_name}`"
+    elsif ENV["R_PACKAGE_DIR"]
+      ohai "Skipping post_install step for autobrew..."
     else
+      #ohai "Not running post_install..."
       post_install
     end
 
