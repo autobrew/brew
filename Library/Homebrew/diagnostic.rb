@@ -646,7 +646,7 @@ module Homebrew
               git -C "#{coretap_path}" remote add origin #{Formatter.url("https://github.com/autobrew/homebrew-core.git")}
           EOS
         elsif origin !~ %r{autobrew/homebrew-core(\.git|/)?$}
-          return if ENV["CI"] && origin.include?("Homebrew/homebrew-test-bot")
+          return if ENV["CI"] && origin.include?("autobrew/homebrew-test-bot")
 
           <<~EOS
             Suspicious #{CoreTap.instance} git origin remote found.
