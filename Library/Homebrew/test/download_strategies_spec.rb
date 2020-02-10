@@ -125,7 +125,7 @@ describe GitHubGitDownloadStrategy do
   subject { described_class.new(url, name, version) }
 
   let(:name) { "brew" }
-  let(:url) { "https://github.com/homebrew/brew.git" }
+  let(:url) { "https://github.com/autobrew/brew.git" }
   let(:version) { nil }
 
   it "parses the URL and sets the corresponding instance variables" do
@@ -560,7 +560,7 @@ describe DownloadStrategyDetector do
     end
 
     context "when given a GitHub Git URL" do
-      let(:url) { "https://github.com/homebrew/brew.git" }
+      let(:url) { "https://github.com/autobrew/brew.git" }
 
       it { is_expected.to eq(GitHubGitDownloadStrategy) }
     end

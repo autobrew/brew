@@ -1,6 +1,10 @@
 #!/bin/bash
 set +o posix
 
+# Added by Jeroen
+export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 # Fail fast with concise message when cwd does not exist
 if ! [[ -d "$PWD" ]]; then
   echo "Error: The current working directory doesn't exist, cannot proceed." >&2

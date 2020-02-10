@@ -24,7 +24,7 @@ module Homebrew
       name = tap.to_s
       git_cd = "$(brew --repo #{tap})"
     elsif cd_dir == HOMEBREW_REPOSITORY
-      name = "Homebrew/brew"
+      name = "autobrew/brew"
       git_cd = "$(brew --repo)"
     else
       name, git_cd = cd_dir
