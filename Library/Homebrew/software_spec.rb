@@ -356,7 +356,9 @@ class BottleSpecification
   end
 
   def compatible_cellar?
-    cellar == :any || cellar == :any_skip_relocation || cellar == HOMEBREW_CELLAR.to_s
+    # AUTOBREW: ignore install dir
+    return true;
+    #cellar == :any || cellar == :any_skip_relocation || cellar == HOMEBREW_CELLAR.to_s
   end
 
   # Does the Bottle this BottleSpecification belongs to need to be relocated?
