@@ -586,6 +586,8 @@ class FormulaInstaller
     caveats = Caveats.new(formula)
 
     return if caveats.empty?
+    #return if ENV.has_key?("R_SESSION_TMPDIR")
+    return
 
     @show_summary_heading = true
     ohai "Caveats", caveats.to_s
