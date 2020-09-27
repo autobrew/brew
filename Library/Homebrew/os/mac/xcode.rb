@@ -20,6 +20,8 @@ module OS
         when "10.12" then "9.2"
         when "10.13" then "9.4"
         when "10.14" then "10.0"
+        when "10.15" then "11.5"
+        when "11.0"  then "12.0"
         else
           raise "macOS '#{MacOS.version}' is invalid" unless OS::Mac.prerelease?
 
@@ -30,7 +32,9 @@ module OS
 
       def minimum_version
         case MacOS.version
-        when "10.14" then "10.0"
+        when "11.0"  then "12.0"
+        when "10.15" then "11.0"
+        when "10.14" then "10.2"
         when "10.13" then "9.0"
         when "10.12" then "8.0"
         else "2.0"
@@ -272,6 +276,8 @@ module OS
         # on the older supported platform for that Xcode release, i.e there's no
         # CLT package for 10.11 that contains the Clang version from Xcode 8.
         case MacOS.version
+        when "11.0" then "1200.0.22.7"
+        when "10.15" then "1103.0.32.59"
         when "10.14" then "1000.10.43.1"
         when "10.13" then "902.0.39.2"
         when "10.12" then "900.0.39.2"
@@ -285,6 +291,8 @@ module OS
 
       def minimum_version
         case MacOS.version
+        when "11.0"  then "12.0.0"
+        when "10.15" then "11.0.0"
         when "10.14" then "10.0.0"
         when "10.13" then "9.0.0"
         when "10.12" then "8.0.0"
