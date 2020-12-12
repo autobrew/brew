@@ -13,8 +13,8 @@ if [[ -n "$HOMEBREW_MACOS" ]]
 then
   if [[ "$HOMEBREW_PROCESSOR" = "Intel" ]]
   then
-    ruby_URL="$HOMEBREW_BOTTLE_DOMAIN/bottles-portable-ruby/portable-ruby-2.6.3.leopard_64.bottle.tar.gz"
-    ruby_URL2="https://github.com/Homebrew/homebrew-portable-ruby/releases/download/2.6.3/portable-ruby-2.6.3.leopard_64.bottle.tar.gz"
+    ruby_URL="$HOMEBREW_BOTTLE_DOMAIN/bottles-portable-ruby/portable-ruby--2.6.3.mavericks.bottle.tar.gz"
+    ruby_URL2="https://github.com/Homebrew/homebrew-portable-ruby/releases/download/2.6.3/portable-ruby--2.6.3.mavericks.bottle.tar.gz"
     ruby_SHA="ab81211a2052ccaa6d050741c433b728d0641523d8742eef23a5b450811e5104"
   fi
 elif [[ -n "$HOMEBREW_LINUX" ]]
