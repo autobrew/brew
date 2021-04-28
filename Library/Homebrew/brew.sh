@@ -86,7 +86,7 @@ then
   HOMEBREW_OS_VERSION="macOS $HOMEBREW_MACOS_VERSION"
   # Don't change this from Mac OS X to match what macOS itself does in Safari on 10.12
   HOMEBREW_OS_USER_AGENT_VERSION="Mac OS X $HOMEBREW_MACOS_VERSION"
-  HOMEBREW_BOTTLE_DEFAULT_DOMAIN="https://homebrew.bintray.com"
+  HOMEBREW_BOTTLE_DEFAULT_DOMAIN="https://bintray-archive.github.io"
 
   # The system Curl is too old for some modern HTTPS certificates on
   # older macOS versions.

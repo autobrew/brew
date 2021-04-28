@@ -40,7 +40,7 @@ HOMEBREW_USER_AGENT_FAKE_SAFARI =
 HOMEBREW_BOTTLE_DEFAULT_DOMAIN = if ENV["HOMEBREW_BOTTLE_DEFAULT_DOMAIN"]
   ENV["HOMEBREW_BOTTLE_DEFAULT_DOMAIN"]
 elsif OS.mac?
-  "https://homebrew.bintray.com".freeze
+  "https://bintray-archive.github.io".freeze
 else
   "https://linuxbrew.bintray.com".freeze
 end
